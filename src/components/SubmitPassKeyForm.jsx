@@ -25,7 +25,9 @@ export const SubmitPasskeyForm = () => {
             }
         })
         .catch((err) => {
+            setIsSubmitting(false);
             console.error(err);
+            alert('An error occurred. Please try again later.');
         });
     };
 
