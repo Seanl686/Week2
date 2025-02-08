@@ -43,7 +43,9 @@ export const SubmitPasskeyForm = () => {
             <b>Please enter the passkey: </b>
             <input type="password" value={passkey} onChange={(e) => setPasskey(e.target.value)} />
             <br/>
-            <button onClick={() => submitPasskey()}>Submit</button>
+            <button onClick={() => submitPasskey()} disabled={isSubmitting}>
+    {isSubmitting ? 'Submitting...' : 'Submit'}
+</button>
         </div>
     );
 };
